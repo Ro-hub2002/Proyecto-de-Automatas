@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Automatas Gramaticales</title>
+
+
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+  
+  </head>
+
+
+<body>  
+
+  <div class="contacto">
+
+    <div>      
+      <h1>Automatas Gramaticales</h1>
+        <h3>Recolección de datos del estudiante</h3>
+
+
+          <form action="" class="formulario" id="formulario">       
+
+                <!--Parte: Nombre-->
+                <div class="formulario_parte" id="parte_nombre">
+                  <label for="nombre" class="formulario_label">Nombre del estudiante
+                    <span class="obligatorio">*</span>
+                  </label>
+                    <input type="text" class="formulario_input" name="nombre" id="nombre" required="obligatorio" placeholder="Escribe tu nombre">
+                    <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                </div>
+                
+                
+                <!--Parte: Código-->
+                <div class="formulario_parte" id="parte_codigo">
+                  <label for="codigo" class="formulario_label">Código estudiante
+                    <span class="obligatorio">*</span>
+                  </label>
+                    <input type="number" class="formulario_input" name="codigo" id="codigo" required="obligatorio" placeholder="Escribe tu código">
+                    <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                </div>
+
+                <!--Parte: Fecha-->
+                <div class="formulario_parte" id="parte_fecha">
+                  <label for="fecha" class="formulario_label">Fecha de Ingreso
+                    <span class="obligatorio">*</span>
+                  </label>
+                    <input type="date" class="formulario_input" name="fecha" id="fecha" placeholder="Escribe tu fecha de ingreso">
+                    <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                </div> 
+
+                <!--Parte: Dirección-->
+                <div class="formulario_parte" id="parte_direccion">
+                  <label for="direccion" class="formulario_label">Dirección
+                    <span class="obligatorio">*</span>
+                  </label>
+                    <input type="text" class="formulario_input" name="direccion" id="direccion" required="obligatorio" placeholder="Escribe tu dirreción">
+                    <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                </div>   
+                
+                <!--Parte: Telefono-->
+                <div class="formulario_parte" id="parte_telefono">
+                  <label for="telefono" class="formulario_label">Teléfono fijo
+                    <span class="obligatorio">*</span>
+                  </label>
+                    <input type="number" class="formulario_input" name="telefono" id="telefono" placeholder="Escribe tu teléfono fijo">
+                    <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                </div>    
+
+                <!--Parte: Celular-->
+                <div class="formulario_parte" id="parte_cel">
+                  <label for="cel" class="formulario_label">Teléfono celular
+                    <span class="obligatorio">*</span>
+                  </label>
+                    <input type="number" class="formulario_input" name="cel" id="cel" placeholder="Escribe tu teléfono personal">
+                    <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                </div> 
+                
+                <!--Parte: Email-->
+                <div class="formulario_parte" id="parte_email">
+                  <label for="email" class="formulario_label">Email
+                    <span class="obligatorio">*</span>
+                  </label>
+                    <input type="text" class="formulario_input" name="email" id="email" placeholder="Escribe tu email">
+                    <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                </div>  
+                                  
+                <!--Aqui van los botones-->
+                <div class="formulario__mensaje" id="formulario__mensaje">
+                  <p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario correctamente. </p>
+                </div>
+          
+                <div class="formulario__grupo formulario__grupo-btn-enviar">
+                  <button type="submit" class="formulario__btn">Enviar</button><br>
+                  <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado exitosamente!</p>
+                </div>
+                <br>
+
+                         
+
+                <button type="submit" name="exportar_formulario" id="exportar"><p>Exportar</p></button>
+                <button type="submit" name="importar_formulario" id="importar"><p>importar</p></button>
+
+                <!--Nombres de los integrantes del proyecto-->
+                <p align="center">Rodrigo José Arrieta Luna<br>
+                   Joel Esteban Marrugo<br>
+                   Stewin Chiquillo<br>
+                   Mauricio Andrés Perez Lopez 
+                </p>
+            
+          </form>
+    </div>  
+  </div>
+  <!--Aqui vinculamos el formulario con JavaScript y también con la pagina de donde obtenemos los iconos-->
+  <script src="app.js"></script>
+  <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+
+</body>
+</html>
