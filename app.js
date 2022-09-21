@@ -3,13 +3,12 @@ const inputs = document.querySelectorAll('#formulario input');
 
 const expresiones = {
 	nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
-	codigo: /^[0-9]{8}$/, // / 7 digitos numericos y que no empiece por 0
-	fecha: /^(0[1-9]|[1-2]\d|3[01])(\/)(0[1-9]|1[012])\2(\d{4})$/,
-	direccion: /^\d+[ ](?:[A-Za-z0-9.-]+[ ]?)+(?:Avenida|Carril|Carretera|Calle|Cra|Dr|C|K|Barrio|B)\.?$/,
+	codigo: /^[1-9]{8}$/, // / 7 digitos numericos y que no empiece por 0
+	fecha: /[0-9]/,
+	direccion: /[a-zA-Z]/,
 	telefono_fijo: /^[0-9]{7}$/,
 	telefono: /^[3][0-9]{9}$/, // 7 a 14 numeros.
-	correo: /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/
-    
+	email: /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/
 }
 
 const espacios = {
@@ -19,7 +18,7 @@ const espacios = {
 	direccion: false,
 	telefono_fijo: false,
 	telefono: false,
-	correo: false
+	email: false
 }
 
 const validarFormulario = (e) => {
@@ -42,8 +41,8 @@ const validarFormulario = (e) => {
 		case "telefono":
 				validarEspacio(expresiones.telefono, e.target, 'telefono');
 		break;
-		case "correo":
-				validarEspacio(expresiones.correo, e.target, 'correo');
+		case "email":
+				validarEspacio(expresiones.email, e.target, 'email');
 		break;
 	}
 }
@@ -72,8 +71,12 @@ inputs.forEach((input) => {
 
 formulario.addEventListener('submit', (e) => {
 	e.preventDefault();
-
-	if (espacios.nombre && espacios.codigo && espacios.fecha && espacios.direccion && espacios.telefono_fijo && espacios.telefono && espacios.correo){
-		formulario.reset(); 
+	console.log(espacios);
+	const isValid = espacios;
+	if (isValid){
+		formulario.reset();
+		// ! Si entra aca es porque el formulario esta bien 
+	}else{
+		console.log("Hola");
 	}
 });
